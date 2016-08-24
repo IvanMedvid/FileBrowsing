@@ -1,0 +1,88 @@
+﻿body {
+    font-size: .85em;
+    color: #232323;
+    background-color: #f0f0f0;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+.statistic-table {
+    border: solid;
+    border-width: 1px;
+    border-color: darkgrey;
+    width: 80%;
+    position: relative;
+    left: 10%;
+    margin-top: 1%;
+
+}
+
+.th-statistic-table {
+    text-align: center;
+    background-color: darkgrey;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-color: darkgrey;
+}
+
+.tr-statistic-table {
+    border: none;
+    font-size: large;
+}
+
+.td-statistic-table {
+    text-align: center;
+    border: solid;
+    border-width: 1px;
+    border-color: darkgrey;
+}
+
+
+.current-path {
+    color: gray;
+    position: relative;
+    left: 10%;
+    font-size: medium;
+}
+
+.list-table {
+    border: solid;
+    border-width: 1px;
+    border-color: lightgray;
+    height: auto;
+    width: 80%;
+    position: relative;
+    left: 10%;
+}
+
+.tr-list-table {
+    border: none;
+    font-size: medium;
+}
+
+.td-list-table {
+    border: none;
+    vertical-align: text-top;
+    padding: 10px 20px;
+}
+
+.subdirectory {
+    color: blue;
+}
+
+.file {
+    color: blue;
+    text-decoration: underline;
+}
+
+.message {
+    color: red;
+    text-align: center;
+}
+
+

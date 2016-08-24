@@ -1,0 +1,1 @@
+﻿var browsingApp = angular.module('browsingApp', []);

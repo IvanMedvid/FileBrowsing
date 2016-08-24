@@ -1,0 +1,47 @@
+﻿@{
+    ViewBag.Title = "File browsing";
+    Layout = "../Shared/_Layout.cshtml";
+}
+
+
+<div ng-controller="BrowsingController">
+
+    <table class="statistic-table">
+        <tr class="tr-statistic-table">
+            <th class="th-statistic-table">Less than 10Mb</th>
+            <th class="th-statistic-table">10Mb-50Mb</th>
+            <th class="th-statistic-table">More 100Mb</th>
+        </tr>
+        <tr class="tr-statistic-table">
+            <td class="td-statistic-table" ng-bind="browsingInfo.countFilesWithSizeLessTenMb"></td>
+            <td class="td-statistic-table" ng-bind="browsingInfo.countFilesWithSizeMoreTenMb"></td>
+            <td class="td-statistic-table" ng-bind="browsingInfo.countFilesWithSizeMoreHundredMb"></td>
+        </tr>
+    </table>
+
+    <h1 class="message" ng-bind="browsingInfo.errorMessage"></h1>
+    <h1 class="message" ng-show="downloadProgress">Loading data. Please wait.</h1>
+    <p class="current-path" ng-hide="downloadProgress">
+        <b>Current folder:</b> <span>{{browsingInfo.currentDirectory}}</span></p>
+    <table class="list-table" ng-hide="downloadProgress">
+        <tr class="tr-list-table">
+            <td class="td-list-table">
+                <p class="file" ng-show="parent" ng-click="load(browsingInfo.parentDirectory)">..</p>
+                <p class="subdirectory" ng-repeat="path in browsingInfo.directories" ng-click="load(path)">
+                    {{path}}
+                </p>
+                <p class="file" ng-repeat="name in browsingInfo.files">
+                    {{name}}
+                </p>
+            </td>
+        </tr>
+    </table>
+    
+
+
+</div>
+
+@section scripts
+{
+<script src="~/Scripts/Controllers/BrowsingController.js"></script>    
+}
